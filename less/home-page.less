@@ -13,6 +13,9 @@
     }
     img{
       border-radius: 10px;
+      @media @mobile{
+        width: 100%;
+      }
     }
   
   }
@@ -27,6 +30,17 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @mobile{
+        width: 100%;
+      }
+    }
+    @media @mobile{
+      .sky{
+        display: none;
+      }
+      .launch{
+        display: none;
+      }
     }
   }
 
@@ -48,7 +62,6 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-
     .walk-text {
       width: 50%;
 
@@ -62,6 +75,16 @@
 
       button{
         .buttonStyle(25%, @btn-bg-color, @porcelain);
+        @media @mobile{
+          .buttonStyle(100%, @btn-bg-color, @porcelain);
+          padding: 20px 0;
+        }
+      }
+      button:hover{
+        .buttonHover(@shuttle-gray, @porcelain);
+      }
+      @media @mobile{
+        width: 100%;
       }
     }
 
@@ -74,6 +97,15 @@
         height: auto;
         border-radius: 10px;
       }
+      @media @mobile{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+      }
+    }
+    @media @mobile{
+      flex-direction: column-reverse;
+      padding: 20px;
     }
   }
 }// home
