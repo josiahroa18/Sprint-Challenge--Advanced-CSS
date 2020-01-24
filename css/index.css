@@ -178,7 +178,7 @@ nav a {
   text-decoration: none;
 }
 nav .links {
-  width: 20%;
+  width: 40%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,6 +190,11 @@ nav .links a {
 @media (max-width: 500px) {
   nav .links {
     width: 80%;
+  }
+}
+@media (max-width: 800px) {
+  nav .links {
+    width: 60%;
   }
 }
 footer {
