@@ -1,0 +1,69 @@
+#signUpBox{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.box-content{
+    background-color: @porcelain;
+    margin: 15% auto;
+    border-radius: 10px;
+    width: 30%;
+    padding: 20px;
+    .sign-up{
+        .flexPosition(center, center);
+        flex-direction: column;
+        h1{
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        form{
+            .flexPosition(center, center);
+            flex-direction: column;
+            width: 60%;
+            label, input{
+                margin-top: 10px;
+                width: 100%;
+            }
+            label{
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            input{
+                height: 30px;
+            }
+        }
+        button{
+            margin: 30px 0;
+            .buttonStyle(40%, @btn-bg-color, @porcelain);
+        }
+    }
+    .close{
+        color: @btn-bg-color;
+        display: flex;
+        justify-content: flex-end;
+        font-size: 2.8rem;
+        font-weight: bold;
+        &:hover, &.focus{
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    // Animations here
+    animation-name: fadeIn;
+    animation-duration: 0.4s;
+    @media @mobile{
+        width: 90%;
+    }
+}
+
+@keyframes fadeIn{
+    from{top: -300px; opacity: 0}
+    to{top: 0; opacity: 1}
+}
